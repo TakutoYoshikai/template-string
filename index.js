@@ -12,10 +12,4 @@ function renderTemplate (template, data) {
   return result;
 }
 
-console.log(renderTemplate("{hello}, {world}, {hoge}", {
-//  hello: "hey",
-  world: "word",
-  hoge: "fuga",
-}));
-
 module.exports = renderTemplate;
