@@ -6,7 +6,7 @@ function renderTemplate (template, data) {
     result = result.replaceAll("{" + key + "}", data[key]);
   }
   let remain;
-  if ((remain = result.match(/\{([a-z]|[A-Z]){1,}\}/)) !== null) {
+  if ((remain = result.match(/\{([a-z]|[A-Z]|_){1,}\}/)) !== null) {
     remain = remain[0];
     throw new Error(`The rendering needs ${remain} value.`);
   }
